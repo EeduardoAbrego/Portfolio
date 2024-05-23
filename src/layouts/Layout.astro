@@ -1,4 +1,6 @@
 ---
+
+
 interface Props {
 	title: string;
 }
@@ -56,11 +58,14 @@ start(3 , 10, 9 , 25);
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<script src="https://kit.fontawesome.com/3a284cca8d.js" crossorigin="anonymous"></script>
-		
+		<script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        
 	</head>
 	<body>
 		
 		<div class="container-fon">
+            
 			<div class="space space-1"></div>
 			<div class="space space-2"></div>
 			<div class="space space-3"></div>
@@ -79,7 +84,7 @@ start(3 , 10, 9 , 25);
 
 			</li>
 			<li  class="glass cont">
-				<a href="index.html#proyectos">Contacto</a>
+				<a href="index.html#contacto">Contacto</a>
 			</li>
 		</ul>
 		</nav>
@@ -88,6 +93,8 @@ start(3 , 10, 9 , 25);
 		 <slot />	
 		</div>
 			
+		
+		
 
 
 		
@@ -105,14 +112,19 @@ start(3 , 10, 9 , 25);
 			
 			body{
             margin: 0%;
-            min-width: 100wh;
+            max-width: 100wh;
             min-height: 100vh;
+			overflow-x: hidden;
 			
             background: radial-gradient(  rgb(7, 7, 39),rgb(0, 0, 0));
             background-attachment: fixed;
             padding-top: 112px;
 			
         }
+
+		body::-webkit-scrollbar{
+			width: 0;
+		}
 		nav{
 			background:  rgb(53, 96, 189);
 			position: fixed;

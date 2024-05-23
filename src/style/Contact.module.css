@@ -4,35 +4,152 @@ label{
     color: aliceblue;
 }
 
-form{
+h1{
+    font-size: 40px;
+    color: aliceblue;
+   
+}
 
+form{
+display: flex;
+    justify-content: space-evenly;
+align-items: center;
     background: #b8b1da10;
 backdrop-filter: blur(0.2rem);
 -webkit-backdrop-filter: blur(0.4rem) ;
-   height: 300px;
-    width: 500px;
-    text-align: center;
+   height: 400px;
+    width: 900px;
+    margin-top:20px;
+ 
 }
 
 .section{
   position: relative;
    display: flex;
    align-items: center;
-   justify-content: center;
+   
    flex-direction: column;
+   height: 1000px;
+   
 }
 
 .input{
-    
+  
+    outline: none;
     background: transparent;
     border-radius: 4px ;
     border:  2px solid green;
-    height: 300px;
+    width: 80%;
+    color: aliceblue;
+    height: 25px;
+
+    
+}
+
+.inputerr{
+    outline: none;
+    background: transparent;
+    border-radius: 4px ;
+    border:  2px solid rgb(255, 42, 4);
+    width: 80%;
+    color: aliceblue;
+    height: 25px;
 }
 
 .glass{
     margin: auto 10px;
      border-radius: 5px 5px;
 
+
+}
+
+.error{
+    color:red;
+    width: 80%;
+    height: 30px;
+    padding-top: 5px;
+    text-align: center;
+    align-self: center;
+    
+}
+
+.campo{
+    width: 100%;
+   
+    margin: 10px;
+}
+
+.campoForm{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+}
+
+.descrip{
+    width: 50%;
+    margin: 20px;
+}
+
+.inputdes {
+    height: 200px;
+    width: 100%;
+    background: transparent;
+    border-radius: 4px ;
+    border:  4px solid rgb(64, 66, 64);
+    resize: none;
+    color: aliceblue;
+}
+
+
+
+p{
+    color: rgb(255, 2, 2);
+    margin: 0;
+    padding: 0;
+}
+
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s !important; /* Evitar el color de fondo */
+  color: #ffffff !important; /* Asegura que el texto del input sea negro */
+  caret-color: #ffffff !important; /* Asegura que el cursor sea negro */
+}
+
+.inputerr:-webkit-autofill,
+.inputerr:-webkit-autofill:hover,
+.inputerr:-webkit-autofill:focus,
+.inputerr:-webkit-autofill:active {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s !important; /* Evitar el color de fondo */
+  color: #ffffff !important; /* Asegura que el texto del input sea negro */
+  caret-color: #ffffff !important; /* Asegura que el cursor sea negro */
+}
+
+.button {
+    background:  rgb(64, 66, 64);
+    text-align: center;
+    margin: 10px;
+    width: 90px;
+align-self: center;
+height: 50px;
+border-radius: 10px;
+color: aliceblue;
+cursor: pointer;
+}
+
+
+.textarea{
+    display: flex;
+    flex-direction: column;
 
 }
