@@ -1,4 +1,6 @@
 ---
+import NavBar from '../components/NavBar.astro';
+
 interface Props {
   title: string;
 }
@@ -66,24 +68,7 @@ start(3, 10, 9, 25);
       <div class="space space-2"></div>
       <div class="space space-3"></div>
     </div>
-
-    <nav>
-      <ul class="ul">
-        <li class="glass cont">
-          <a href="#">Inicio</a>
-        </li>
-        <li class="glass cont">
-          <a href="index.html#proyectos">Proyectos</a>
-        </li>
-        <li class="glass cont">
-          <a href="index.html#About">About</a>
-        </li>
-        <li class="glass cont">
-          <a href="index.html#contacto">Contacto</a>
-        </li>
-      </ul>
-    </nav>
-
+    <NavBar />
     <div>
       <slot />
     </div>
@@ -123,46 +108,12 @@ start(3, 10, 9, 25);
   body::-webkit-scrollbar {
     width: 0;
   }
-  nav {
-    background: rgb(53, 96, 189);
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    top: 0px;
-  }
-
-  .glass {
-    background: #fefeff10;
-    backdrop-filter: blur(0.2rem);
-    -webkit-backdrop-filter: blur(0.4rem);
-  }
-
-  .cont {
-    margin: 30px;
-    width: 80px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px 0 10px;
-    border-radius: 10%;
-    transition: all 0.5s ease;
-  }
-
   a {
     color: #fff;
     text-decoration: none;
     font-size: larger;
   }
-  .cont:hover {
-    scale: 1.5;
-  }
-  .ul {
-    margin: 0;
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-  }
+
   .container-fon {
     position: fixed;
     inset: 0;
