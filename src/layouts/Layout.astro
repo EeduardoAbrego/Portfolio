@@ -1,227 +1,215 @@
 ---
-
-
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 
+let spaceLayer1, spaceLayer2, spaceLayer3;
 
-let spaceLayer1, spaceLayer2, spaceLayer3
- 
-let size1, size2, size3
+let size1, size2, size3;
 
-let time1, time2 , time3
+let time1, time2, time3;
 
-const start = (selector:number , total:number, size:number, time:number) => {
-const layer = [] ;
-    
-	for (let i = 0; i < total; i++) {
-		const x = Math.floor(Math.random() * 100);
-		const y = Math.floor(Math.random() * 100);
-		layer.push(`${x}vw ${y}vh 0 white, ${x}vw ${y + 100}vh 0 white`)
-	}
-  if( selector === 1 ){
-	time1= `${time}s`
-	size1 = `${size}px`
-  spaceLayer1 = layer.join(",");
-} 
+const start = (selector: number, total: number, size: number, time: number) => {
+  const layer = [];
 
-if ( selector === 2 ) {
-	time2= `${time}s`
-	size2 = `${size}px`
-	spaceLayer2 = layer.join(",");
-} 
+  for (let i = 0; i < total; i++) {
+    const x = Math.floor(Math.random() * 100);
+    const y = Math.floor(Math.random() * 100);
+    layer.push(`${x}vw ${y}vh 0 white, ${x}vw ${y + 100}vh 0 white`);
+  }
+  if (selector === 1) {
+    time1 = `${time}s`;
+    size1 = `${size}px`;
+    spaceLayer1 = layer.join(',');
+  }
 
-if(selector === 3){
-	time3= `${time}s`
-	size3 = `${size}px`
-	spaceLayer3 = layer.join(",");
-}
+  if (selector === 2) {
+    time2 = `${time}s`;
+    size2 = `${size}px`;
+    spaceLayer2 = layer.join(',');
+  }
 
-}
+  if (selector === 3) {
+    time3 = `${time}s`;
+    size3 = `${size}px`;
+    spaceLayer3 = layer.join(',');
+  }
+};
 
-start(1 , 400, 2, 40);
-start(2 , 60, 5, 30);
-start(3 , 10, 9 , 25);
-
+start(1, 400, 2, 40);
+start(2, 60, 5, 30);
+start(3, 10, 9, 25);
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<script src="https://kit.fontawesome.com/3a284cca8d.js" crossorigin="anonymous"></script>
-		<script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-        </script>
-        
-	</head>
-	<body>
-		
-		<div class="container-fon">
-            
-			<div class="space space-1"></div>
-			<div class="space space-2"></div>
-			<div class="space space-3"></div>
-		</div>
-		
-		<nav>
-			<ul class="ul">
-			<li class="glass cont" >
-				<a href="#">Inicio</a>
-			</li>
-			<li class="glass cont">
-				<a href="index.html#proyectos">Proyectos</a>  
-			</li> 
-			<li  class="glass cont">
-				<a href="index.html#About">About</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script
+      src="https://kit.fontawesome.com/3a284cca8d.js"
+      crossorigin="anonymous"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fon">
+      <div class="space space-1"></div>
+      <div class="space space-2"></div>
+      <div class="space space-3"></div>
+    </div>
 
-			</li>
-			<li  class="glass cont">
-				<a href="index.html#contacto">Contacto</a>
-			</li>
-		</ul>
-		</nav>
+    <nav>
+      <ul class="ul">
+        <li class="glass cont">
+          <a href="#">Inicio</a>
+        </li>
+        <li class="glass cont">
+          <a href="index.html#proyectos">Proyectos</a>
+        </li>
+        <li class="glass cont">
+          <a href="index.html#About">About</a>
+        </li>
+        <li class="glass cont">
+          <a href="index.html#contacto">Contacto</a>
+        </li>
+      </ul>
+    </nav>
 
-		<div>
-		 <slot />	
-		</div>
-			
-		
-		
-
-
-		
-	</body>
+    <div>
+      <slot />
+    </div>
+  </body>
 </html>
 
-		<style is:global define:vars={{time1, time2, time3, size1,size2, size3, spaceLayer1, spaceLayer2, spaceLayer3}}>
-			
-			
+<style
+  is:global
+  define:vars={{
+    time1,
+    time2,
+    time3,
+    size1,
+    size2,
+    size3,
+    spaceLayer1,
+    spaceLayer2,
+    spaceLayer3,
+  }}
+>
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 130px;
+  }
 
-			html{
-				scroll-behavior: smooth;
-				scroll-padding-top: 130px;
-			}
-			
-			body{
-            margin: 0%;
-            max-width: 100wh;
-            min-height: 100vh;
-			overflow-x: hidden;
-			
-            background: radial-gradient(  rgb(7, 7, 39),rgb(0, 0, 0));
-            background-attachment: fixed;
-            padding-top: 112px;
-			
-        }
+  body {
+    margin: 0%;
+    max-width: 100wh;
+    min-height: 100vh;
+    overflow-x: hidden;
 
-		body::-webkit-scrollbar{
-			width: 0;
-		}
-		nav{
-			background:  rgb(53, 96, 189);
-			position: fixed;
-			z-index: 1;
-			width: 100%;
-			top: 0px;
-			
-		}
+    background: radial-gradient(rgb(7, 7, 39), rgb(0, 0, 0));
+    background-attachment: fixed;
+    padding-top: 112px;
+  }
 
-		.glass{
+  body::-webkit-scrollbar {
+    width: 0;
+  }
+  nav {
+    background: rgb(53, 96, 189);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0px;
+  }
 
-background: #fefeff10;
-backdrop-filter: blur(0.2rem);
--webkit-backdrop-filter: blur(0.4rem) ;
-}
+  .glass {
+    background: #fefeff10;
+    backdrop-filter: blur(0.2rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+  }
 
-.cont{
-	margin :30px;
-	width: 80px;
-	height: 50px;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 0 10px 0 10px;
-border-radius: 10%;
-transition: all 0.5s ease;
+  .cont {
+    margin: 30px;
+    width: 80px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    border-radius: 10%;
+    transition: all 0.5s ease;
+  }
 
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: larger;
+  }
+  .cont:hover {
+    scale: 1.5;
+  }
+  .ul {
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .container-fon {
+    position: fixed;
+    inset: 0;
+  }
 
-	
-}
-   
-		a{
-			
-			color: #fff;
-			text-decoration: none;
-			font-size: larger;
-			
-		}
-		 .cont:hover{
-			scale: 1.5;
-		 }
-		.ul{
-			margin: 0;
-			position: relative;
-			display: flex;
-			justify-content: space-evenly;
-		}
-          .container-fon{
-			
-			position: fixed;
-			inset: 0;
-		 } 
+  .space {
+    border-radius: 80%;
+    width: var(--size1);
+    height: var(--size1);
+    background: #fff;
+    box-shadow: var(--spaceLayer1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 75%;
+    animation: moveStart var(--time1) linear infinite;
+  }
+  .space-2 {
+    width: var(--size2);
+    height: var(--size2);
+    background: #fff;
+    box-shadow: var(--spaceLayer2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 75%;
+    animation: moveStart var(--time2) linear infinite;
+  }
 
-		 .space{
-			border-radius: 80%;
-			width: var(--size1);
-			height: var(--size1);
-			background: #fff;
-			box-shadow: var(--spaceLayer1);
-			position: absolute;
-			top: 0;
-			left: 0;
-			opacity: 75%;
-			animation: moveStart var(--time1) linear infinite;
-         }
-		 .space-2{
-			
-			width: var(--size2);
-			height: var(--size2) ;
-			background: #fff;
-			box-shadow: var(--spaceLayer2);
-			position: absolute;
-			top: 0;
-			left: 0;
-			opacity: 75%;
-			animation: moveStart var(--time2) linear infinite;
-         }
+  .space-3 {
+    width: var(--size3);
+    height: var(--size3);
+    background: #fff;
+    box-shadow: var(--spaceLayer3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 75%;
+    animation: moveStart var(--time3) linear infinite;
+  }
 
-		 .space-3{
-			
-			width: var(--size3);
-			height: var(--size3) ;
-			background: #fff;
-			box-shadow: var(--spaceLayer3);
-			position: absolute;
-			top: 0;
-			left: 0;
-			opacity: 75%;
-			animation: moveStart var(--time3) linear infinite;
-         }
-
-
-
-		 @keyframes moveStart {
-			from { transform: translateY(0);}
-			to { transform: translateY(-100vh);}
-		 }
-
-
-		</style>
+  @keyframes moveStart {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100vh);
+    }
+  }
+</style>

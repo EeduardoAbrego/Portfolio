@@ -1,115 +1,101 @@
-
-label{
-    display: block;
-    color: aliceblue;
+label {
+  display: block;
+  color: aliceblue;
 }
 
-h1{
-    font-size: 40px;
-    color: aliceblue;
-   
+h1 {
+  font-size: 40px;
+  color: aliceblue;
 }
 
-form{
-display: flex;
-    justify-content: space-evenly;
-align-items: center;
-    background: #b8b1da10;
-backdrop-filter: blur(0.2rem);
--webkit-backdrop-filter: blur(0.4rem) ;
-   height: 400px;
-    width: 900px;
-    margin-top:20px;
- 
+form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #b8b1da10;
+  backdrop-filter: blur(0.2rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+  height: 400px;
+  width: 900px;
+  margin-top: 20px;
 }
 
-.section{
+.section {
   position: relative;
-   display: flex;
-   align-items: center;
-   
-   flex-direction: column;
-   height: 1000px;
-   
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  height: 1000px;
 }
 
-.input{
-  
-    outline: none;
-    background: transparent;
-    border-radius: 4px ;
-    border:  2px solid green;
-    width: 80%;
-    color: aliceblue;
-    height: 25px;
-
-    
+.input {
+  outline: none;
+  background: transparent;
+  border-radius: 4px;
+  border: 2px solid green;
+  width: 80%;
+  color: aliceblue;
+  height: 25px;
 }
 
-.inputerr{
-    outline: none;
-    background: transparent;
-    border-radius: 4px ;
-    border:  2px solid rgb(255, 42, 4);
-    width: 80%;
-    color: aliceblue;
-    height: 25px;
+.inputerr {
+  outline: none;
+  background: transparent;
+  border-radius: 4px;
+  border: 2px solid rgb(255, 42, 4);
+  width: 80%;
+  color: aliceblue;
+  height: 25px;
 }
 
-.glass{
-    margin: auto 10px;
-     border-radius: 5px 5px;
-
-
+.glass {
+  margin: auto 10px;
+  border-radius: 5px 5px;
 }
 
-.error{
-    color:red;
-    width: 80%;
-    height: 30px;
-    padding-top: 5px;
-    text-align: center;
-    align-self: center;
-    
+.error {
+  color: red;
+  width: 80%;
+  height: 30px;
+  padding-top: 5px;
+  text-align: center;
+  align-self: center;
 }
 
-.campo{
-    width: 100%;
-   
-    margin: 10px;
+.campo {
+  width: 100%;
+
+  margin: 10px;
 }
 
-.campoForm{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-
+.campoForm {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
 }
 
-.descrip{
-    width: 50%;
-    margin: 20px;
+.descrip {
+  width: 50%;
+  margin: 20px;
 }
 
 .inputdes {
-    height: 200px;
-    width: 100%;
-    background: transparent;
-    border-radius: 4px ;
-    border:  4px solid rgb(64, 66, 64);
-    resize: none;
-    color: aliceblue;
+  height: 200px;
+  width: 100%;
+  background: transparent;
+  border-radius: 4px;
+  border: 4px solid rgb(64, 66, 64);
+  resize: none;
+  color: aliceblue;
 }
 
-
-
-p{
-    color: rgb(255, 2, 2);
-    margin: 0;
-    padding: 0;
+p {
+  color: rgb(255, 2, 2);
+  margin: 0;
+  padding: 0;
 }
-
 
 .input:-webkit-autofill,
 .input:-webkit-autofill:hover,
@@ -136,20 +122,18 @@ p{
 }
 
 .button {
-    background:  rgb(64, 66, 64);
-    text-align: center;
-    margin: 10px;
-    width: 90px;
-align-self: center;
-height: 50px;
-border-radius: 10px;
-color: aliceblue;
-cursor: pointer;
+  background: rgb(64, 66, 64);
+  text-align: center;
+  margin: 10px;
+  width: 90px;
+  align-self: center;
+  height: 50px;
+  border-radius: 10px;
+  color: aliceblue;
+  cursor: pointer;
 }
 
-
-.textarea{
-    display: flex;
-    flex-direction: column;
-
+.textarea {
+  display: flex;
+  flex-direction: column;
 }
