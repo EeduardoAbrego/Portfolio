@@ -6,7 +6,7 @@
   <div class="relative">
     <div class="flex justify-center items-center p-0 m-0 relative">
       <div
-        class="w-auto h-auto relative border-[20px] border-transparent bg-gradient-to-bl from-custom-blue to-custom-blue-1 box-border rounded-full"
+        class="relative p-4 bg-gradient-to-bl from-custom-blue to-custom-blue-1 rounded-full"
       >
         <img
           class="w-[300px] h-[300px] rounded-full"
@@ -19,13 +19,13 @@
         class="rounded-[30px] w-[1000px] font-medium justify-center items-center mt-9 mr-2 text-center drop-shadow-3xl -ml-20 h-[400px]"
       >
         <h1
-          class="pt-0 text-[100px] mt-14 rounded-r-full bg-gradient-to-r from-custom-blue to-custom-blue-1"
+          class="pt-0 text-[100px] text-white mt-14 rounded-r-full bg-gradient-to-r from-custom-blue to-custom-blue-1"
         >
           Eduardo Abrego
         </h1>
 
         <div class="relative text-center">
-          <h1 class="animate-slidein text-center mt-14 text-[50px]">
+          <h1 class="animate-slidein text-center text-white mt-14 text-[50px]">
             Full-Stack Developer
           </h1>
         </div>
@@ -44,33 +44,35 @@
       </div>
     </div>
 
-    <div class="flex justify-center m-3">
+    <div class="flex justify-center m-3 relative">
       <ul
         class="list-none flex justify-evenly w-1/2 h-12 relative [&>li]:text-center [&>li]:transition-all [&>li]:min-w-24 [&>li>a>i]:text-[40px] [&>li>a>i]:text-center [&>li>a>i]: m-1"
       >
         <li class="hover:scale-125">
-          <a target="_blank" href="https://www.linkedin.com/in/eduardoabrego">
+          <a href="https://www.linkedin.com/in/eduardoabrego">
             <i class="fa-brands fa-linkedin"></i>
           </a>
         </li>
 
         <li class="hover:scale-125">
-          <a href="">
+          <a target="_blank" href="">
             <i class="fa-brands fa-github"></i>
           </a>
         </li>
 
-        <li class="hover:scale-125">
-          <a href="">
-            <i class="fa-regular fa-envelope" style="color: #f7f9fd;"></i>
-          </a>
-        </li>
-
-        <li class="hover:scale-125">
-          <a href="">
+        <li class="setOpacity hover:scale-125">
+          <a
+            href="/pdf/EDUARDOABREGO-CVFullStack.pdf"
+            download="EDUARDO ABREGO-CV FullStack.pdf"
+          >
             <i class="fa-solid fa-download" style="color: #ffffff;"></i>
           </a>
         </li>
+        <p
+          class="opacity absolute top-2 right-10 text-white text-[20px] opacity-0"
+        >
+          Descargar CV
+        </p>
       </ul>
     </div>
 
@@ -78,4 +80,8 @@
   </div>
 </header>
 
-<style></style>
+<style>
+  .setOpacity:hover ~ .opacity {
+    opacity: 1;
+  }
+</style>

@@ -61,13 +61,13 @@ export default function Form() {
       </h1>
       <form
         className={
-          'flex justify-evenly items-center bg-custom-bg backdrop-custom-blur h-[400px] w-[900px]  mt-5 '
+          'flex justify-evenly items-center bg-custom-bg backdrop-custom-blur h-[400px] w-[1000px]  mt-5 relative'
         }
         onSubmit={handleSubmit(submit, () => {})}
       >
         <div className={'w-[40%] flex flex-col items-center m-5'}>
           <div className={'w-[100%] m-4'}>
-            <label className={'block text-white'} htmlFor="nombre">
+            <label className={'block text-white text-[25px]'} htmlFor="nombre">
               Nombre
             </label>
             <input
@@ -98,7 +98,7 @@ export default function Form() {
           </div>
 
           <div className={'w-[100%] m-4'}>
-            <label className={'block text-white'} htmlFor="email">
+            <label className={'block text-white text-[25px]'} htmlFor="email">
               Email
             </label>
             <input
@@ -129,23 +129,24 @@ export default function Form() {
               )}
             </div>
           </div>
-
-          {isValid && (
-            <button
-              id="miBoton"
-              className={
-                ' bg-gray-600 text-center m-3 w-[90px] self-center h-12 rounded-xl text-white cursor-pointer'
-              }
-              type="submit"
-            >
-              Enviar
-            </button>
-          )}
         </div>
-
-        <div className={'w-1/2 m-5'}>
+        {isValid && (
+          <button
+            id="miBoton"
+            className={
+              ' bg-gray-600 text-center m-3 w-[90px] self-center h-12 rounded-xl text-white cursor-pointer absolute  -bottom-0 left-[150px]'
+            }
+            type="submit"
+          >
+            Enviar
+          </button>
+        )}
+        <div className={'w-1/2 m-5 h-5/6 '}>
           <div className={'flex flex-col'}>
-            <label className={'block text-white '} htmlFor="description">
+            <label
+              className={'block text-white text-[25px] '}
+              htmlFor="description"
+            >
               Mensaje
             </label>
             <textarea
