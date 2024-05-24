@@ -2,24 +2,39 @@
 
 ---
 
-<header>
-  <div class="con">
-    <div id="head">
-      <div class="border-radius">
-        <img src="/imagen/IMG_20240111_203125_1.jpg" alt="" />
+<header class="opacity-100 -z-10 h-4/5">
+  <div class="relative">
+    <div class="flex justify-center items-center p-0 m-0 relative">
+      <div
+        class="w-auto h-auto relative border-[20px] border-transparent bg-gradient-to-bl from-custom-blue to-custom-blue-1 box-border rounded-full"
+      >
+        <img
+          class="w-[300px] h-[300px] rounded-full"
+          src="/imagen/IMG_20240111_203125_1.jpg"
+          alt=""
+        />
       </div>
-      <div class="title">
-        <h1 class="fot">Eduardo Abrego</h1>
 
-        <div class="sub">
-          <h1 class="animated">Full-Stack Developer</h1>
+      <div
+        class="rounded-[30px] w-[1000px] font-medium justify-center items-center mt-9 mr-2 text-center drop-shadow-3xl -ml-20 h-[400px]"
+      >
+        <h1
+          class="pt-0 text-[100px] mt-14 rounded-r-full bg-gradient-to-r from-custom-blue to-custom-blue-1"
+        >
+          Eduardo Abrego
+        </h1>
+
+        <div class="relative text-center">
+          <h1 class="animate-slidein text-center mt-14 text-[50px]">
+            Full-Stack Developer
+          </h1>
         </div>
       </div>
     </div>
 
-    <div class="descri">
-      <div style=" width: 1000px; text-align: center;">
-        <p>
+    <div class="min-h-32 mb-8 relative text-[25px] flex justify-center">
+      <div class="w-[1000px] text-center">
+        <p class="text-cyan-50">
           Busco inspirar y cautivar a través de cada proyecto que realizo. Me
           considero un solucionador de problemas creativo, siempre buscando
           nuevas formas de abordar los desafíos que me permitan expandir mis
@@ -29,188 +44,38 @@
       </div>
     </div>
 
-    <ul>
-      <li>
-        <a target="_blank" href="https://www.linkedin.com/in/eduardoabrego">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </li>
+    <div class="flex justify-center m-3">
+      <ul
+        class="list-none flex justify-evenly w-1/2 h-12 relative [&>li]:text-center [&>li]:transition-all [&>li]:min-w-24 [&>li>a>i]:text-[40px] [&>li>a>i]:text-center [&>li>a>i]: m-1"
+      >
+        <li class="hover:scale-125">
+          <a target="_blank" href="https://www.linkedin.com/in/eduardoabrego">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
 
-      <li>
-        <a href="">
-          <i class="fa-brands fa-github"></i>
-        </a>
-      </li>
+        <li class="hover:scale-125">
+          <a href="">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
 
-      <li>
-        <a href="">
-          <i class="fa-regular fa-envelope" style="color: #f7f9fd;"></i>
-        </a>
-      </li>
+        <li class="hover:scale-125">
+          <a href="">
+            <i class="fa-regular fa-envelope" style="color: #f7f9fd;"></i>
+          </a>
+        </li>
 
-      <li>
-        <a href="">
-          <i class="fa-solid fa-download" style="color: #ffffff;"></i>
-        </a>
-      </li>
-    </ul>
-    <hr />
+        <li class="hover:scale-125">
+          <a href="">
+            <i class="fa-solid fa-download" style="color: #ffffff;"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <hr class="w-[8/10] h-1 text-white mx-60" />
   </div>
 </header>
 
-<style>
-  span {
-    width: 150px;
-    height: 154px;
-    position: absolute;
-    background-color: rgb(71, 139, 218);
-    top: 70px;
-    right: 170px;
-    border-radius: 50%;
-  }
-  li:hover {
-    scale: 1.5;
-  }
-
-  .fot {
-    padding-top: 0;
-    border-radius: 0px 80px 80px 0px;
-    border: 10px solid transparent;
-    background: linear-gradient(to right, rgb(43, 87, 184), rgb(2, 28, 112))
-      border-box;
-  }
-  .border-radius {
-    width: auto;
-    height: auto;
-    position: relative;
-    border: 20px solid transparent;
-    background: linear-gradient(
-        to bottom left,
-        rgb(53, 96, 189),
-        rgb(2, 28, 112)
-      )
-      border-box;
-
-    border-radius: 60%;
-  }
-
-  p {
-    color: aliceblue;
-    text-wrap: wrap;
-    font-size: 25px;
-  }
-  .descri {
-    min-height: 130px;
-    margin-bottom: 30px;
-    position: relative;
-    color: antiquewhite;
-    font-size: larger;
-    display: flex;
-    justify-content: center;
-  }
-  .con {
-    position: relative;
-  }
-  header {
-    opacity: 1;
-    z-index: -1;
-
-    min-height: 80vh;
-  }
-  .sub {
-    position: relative;
-    text-align: center;
-  }
-  hr {
-    width: 80%;
-    margin: 0 auto; /* Centro la línea horizontal */
-    border: none; /* Opcional: elimina el borde predeterminado */
-    height: 2px; /* Ajusta la altura de la línea */
-    background-color: #ffffff;
-  }
-
-  div i {
-    margin-top: 5px;
-    font-size: 40px;
-    align-self: center;
-  }
-  li {
-    min-width: 100px;
-    text-align: center;
-    transition: all 0.5s ease;
-  }
-  ul {
-    list-style: none;
-    width: 50vw;
-    height: 60px;
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 5px auto 5px auto;
-  }
-
-  .title {
-    border-radius: 30px;
-    width: 900px;
-    font-size: medium;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0px 0px 10px;
-    text-align: center;
-    text-shadow: 3px 5px 0 rgb(10, 26, 172);
-    margin-left: -90px;
-    height: 400px;
-  }
-
-  #head {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    margin: 0px;
-
-    position: relative;
-  }
-
-  h1 {
-    color: rgb(254, 254, 255);
-    padding: 0px;
-    font-size: 100px;
-    margin-top: 60px;
-  }
-
-  img {
-    position:;
-    width: 300px;
-    height: 300px;
-    border-radius: 60%;
-
-    opacity: 1;
-  }
-
-  .animated {
-    text-align: center;
-    font-size: 50px;
-    color: rgb(233, 233, 241);
-    animation-duration: 2s;
-    animation-name: slidein;
-  }
-
-  .logos {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%;
-    }
-
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
-</style>
+<style></style>

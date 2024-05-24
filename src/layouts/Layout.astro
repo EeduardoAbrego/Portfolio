@@ -63,11 +63,16 @@ start(3, 10, 9, 25);
     ></script>
   </head>
   <body>
-    <div class="container-fon">
+    <!-- <div class="container-fon">
       <div class="space space-1"></div>
       <div class="space space-2"></div>
       <div class="space space-3"></div>
+    </div> -->
+
+    <div class="container-fon">
+      <video src="/imagen/ddd.mp4" autoplay loop muted></video>
     </div>
+
     <NavBar />
     <div>
       <slot />
@@ -100,7 +105,7 @@ start(3, 10, 9, 25);
     min-height: 100vh;
     overflow-x: hidden;
 
-    background: radial-gradient(rgb(7, 7, 39), rgb(0, 0, 0));
+    /* background: radial-gradient(rgb(7, 7, 39), rgb(0, 0, 0)); */
     background-attachment: fixed;
     padding-top: 112px;
   }
@@ -115,6 +120,7 @@ start(3, 10, 9, 25);
   }
 
   .container-fon {
+    margin-top: 20px;
     position: fixed;
     inset: 0;
   }
