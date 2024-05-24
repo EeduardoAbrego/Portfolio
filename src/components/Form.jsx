@@ -50,14 +50,26 @@ export default function Form() {
   };
 
   return (
-    <section id="contacto" className={style.section}>
+    <section
+      id="contacto"
+      className={' relative flex items-center flex-col h-[1000px]'}
+    >
       <Toaster theme="dark" position="bottom-center" />
 
-      <h1 class="text-[60px] relative text-white text-center">Contacto</h1>
-      <form onSubmit={handleSubmit(submit, () => {})}>
-        <div className={style.campoForm}>
-          <div className={style.campo}>
-            <label htmlFor="nombre">Nombre</label>
+      <h1 className={'text-[60px] relative text-white text-center'}>
+        Contacto
+      </h1>
+      <form
+        className={
+          'flex justify-evenly items-center bg-custom-bg backdrop-custom-blur h-[400px] w-[900px]  mt-5 '
+        }
+        onSubmit={handleSubmit(submit, () => {})}
+      >
+        <div className={'w-[40%] flex flex-col items-center m-5'}>
+          <div className={'w-[100%] m-4'}>
+            <label className={'block text-white'} htmlFor="nombre">
+              Nombre
+            </label>
             <input
               className={!errors.name ? style.input : style.inputerr}
               type="text"
@@ -74,13 +86,21 @@ export default function Form() {
               })}
             />
 
-            <div className={style.error}>
-              {errors.name && <p>{errors.name.message}</p>}
+            <div
+              className={
+                'text-red-700 w-[80%]  h-8 pt-1 text-center self-center '
+              }
+            >
+              {errors.name && (
+                <p className={'text-red-600 m-0 p-0'}>{errors.name.message}</p>
+              )}
             </div>
           </div>
 
-          <div className={style.campo}>
-            <label htmlFor="email">Email</label>
+          <div className={'w-[100%] m-4'}>
+            <label className={'block text-white'} htmlFor="email">
+              Email
+            </label>
             <input
               className={!errors.email ? style.input : style.inputerr}
               type="email"
@@ -99,23 +119,37 @@ export default function Form() {
               })}
             />
 
-            <div className={style.error}>
-              {errors.email && <p>{errors.email.message}</p>}
+            <div
+              className={
+                'text-red-700 w-[80%]  h-8 pt-1 text-center self-center '
+              }
+            >
+              {errors.email && (
+                <p className={'text-red-600 m-0 p-0'}>{errors.email.message}</p>
+              )}
             </div>
           </div>
 
           {isValid && (
-            <button id="miBoton" className={style.button} type="submit">
+            <button
+              id="miBoton"
+              className={
+                ' bg-gray-600 text-center m-3 w-[90px] self-center h-12 rounded-xl text-white cursor-pointer'
+              }
+              type="submit"
+            >
               Enviar
             </button>
           )}
         </div>
 
-        <div className={style.descrip}>
-          <div className={style.textarea}>
-            <label htmlFor="description">Mensaje</label>
+        <div className={'w-1/2 m-5'}>
+          <div className={'flex flex-col'}>
+            <label className={'block text-white '} htmlFor="description">
+              Mensaje
+            </label>
             <textarea
-              className={style.inputdes}
+              className={errors.message ? style.inputDesErr : style.inputdes}
               autoComplete="off"
               type=""
               id="description"
@@ -136,8 +170,16 @@ export default function Form() {
               cols={15}
               rows={5}
             ></textarea>
-            <div className={style.error}>
-              {errors.message && <p>{errors.message.message}</p>}
+            <div
+              className={
+                'text-red-700 w-[80%]  h-8 pt-1 text-center self-center '
+              }
+            >
+              {errors.message && (
+                <p className={'text-red-600 m-0 p-0'}>
+                  {errors.message.message}
+                </p>
+              )}
             </div>
           </div>
         </div>
