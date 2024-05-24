@@ -1,13 +1,13 @@
-"useClient";
+'useClient';
 
-import { useForm } from "react-hook-form";
-import style from "../style/Contact.module.css";
-import emailjs from "emailjs-com";
-import { Toaster, toast } from "sonner";
+import { useForm } from 'react-hook-form';
+import style from '../style/Contact.module.css';
+import emailjs from 'emailjs-com';
+import { Toaster, toast } from 'sonner';
 
-const YOUR_SERVICE_ID = "service_uyo43pq";
-const YOUR_TEMPLATE_ID = "template_4kbk2vg";
-const YOUR_USER_ID = "Mdg9nrA85n5zhBrRF";
+const YOUR_SERVICE_ID = 'service_uyo43pq';
+const YOUR_TEMPLATE_ID = 'template_4kbk2vg';
+const YOUR_USER_ID = 'Mdg9nrA85n5zhBrRF';
 
 export default function Form() {
   const {
@@ -15,16 +15,16 @@ export default function Form() {
     formState: { errors, isDirty, isValid },
     handleSubmit,
     reset,
-  } = useForm({ mode: "onChange" });
+  } = useForm({ mode: 'onChange' });
 
   const submit = (data) => {
     const { email, name, message } = data;
     const params = { name, email, message };
     console.log(params);
-    toast.success("Email enviado con exito", {
+    toast.success('Email enviado con exito', {
       duration: 2500,
       classNames: {
-        toast: "h-38 text-xl",
+        toast: 'h-38 text-xl',
       },
     });
 
@@ -44,32 +44,32 @@ export default function Form() {
     //   toast.error('Hubo un problema al enviar el email.');
     // });
     reset();
-    let boton = document.getElementById("miBoton");
+    let boton = document.getElementById('miBoton');
     // Desactivar el botón
     boton.disabled = true;
   };
 
   return (
-    <section id='contacto' className={style.section}>
-      <Toaster theme='dark' position='bottom-center' />
+    <section id="contacto" className={style.section}>
+      <Toaster theme="dark" position="bottom-center" />
 
-      <h1>Contacto</h1>
+      <h1 class="text-[60px] relative text-white text-center">Contacto</h1>
       <form onSubmit={handleSubmit(submit, () => {})}>
         <div className={style.campoForm}>
           <div className={style.campo}>
-            <label htmlFor='nombre'>Nombre</label>
+            <label htmlFor="nombre">Nombre</label>
             <input
               className={!errors.name ? style.input : style.inputerr}
-              type='text'
-              id='name'
-              {...register("name", {
+              type="text"
+              id="name"
+              {...register('name', {
                 required: {
                   value: true,
-                  message: "Este campo es requerido",
+                  message: 'Este campo es requerido',
                 },
                 maxLength: {
                   value: 16,
-                  message: "Ingrese como maximo 16 caracteres",
+                  message: 'Ingrese como maximo 16 caracteres',
                 },
               })}
             />
@@ -80,21 +80,21 @@ export default function Form() {
           </div>
 
           <div className={style.campo}>
-            <label htmlFor='email'>Email</label>
+            <label htmlFor="email">Email</label>
             <input
               className={!errors.email ? style.input : style.inputerr}
-              type='email'
-              autoComplete='off'
-              id='email'
-              {...register("email", {
+              type="email"
+              autoComplete="off"
+              id="email"
+              {...register('email', {
                 pattern: {
                   value:
                     /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-                  message: "El email no es valido",
+                  message: 'El email no es valido',
                 },
                 required: {
                   value: true,
-                  message: "Este campo es requerido",
+                  message: 'Este campo es requerido',
                 },
               })}
             />
@@ -105,7 +105,7 @@ export default function Form() {
           </div>
 
           {isValid && (
-            <button id='miBoton' className={style.button} type='submit'>
+            <button id="miBoton" className={style.button} type="submit">
               Enviar
             </button>
           )}
@@ -113,24 +113,24 @@ export default function Form() {
 
         <div className={style.descrip}>
           <div className={style.textarea}>
-            <label htmlFor='description'>Mensaje</label>
+            <label htmlFor="description">Mensaje</label>
             <textarea
               className={style.inputdes}
-              autoComplete='off'
-              type=''
-              id='description'
-              {...register("message", {
+              autoComplete="off"
+              type=""
+              id="description"
+              {...register('message', {
                 required: {
                   value: true,
-                  message: "Este campo es requerido",
+                  message: 'Este campo es requerido',
                 },
                 minLength: {
                   value: 5,
-                  message: "Ingrese minimo 5 caracteres",
+                  message: 'Ingrese minimo 5 caracteres',
                 },
                 maxLength: {
                   value: 550,
-                  message: "Ingrese maximo 550 caracteres",
+                  message: 'Ingrese maximo 550 caracteres',
                 },
               })}
               cols={15}

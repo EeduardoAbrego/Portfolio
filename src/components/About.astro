@@ -3,7 +3,7 @@
 ---
 
 <section id="About">
-  <h1>About</h1>
+  <h1 class="text-[60px] relative text-white text-center">About</h1>
 
   <div class="slider">
     <div class="slide-track">
@@ -73,8 +73,10 @@
       </div>
     </div>
   </div>
-  <div class="sec">
-    <div class="glass seccion">
+  <div class="flex justify-center relative">
+    <div
+      class="bg-custom-bg backdrop-custom-blur w-[80%] m-3 h-auto text-center [&>p]:m-5 [&>p]:text-balance [&>p]: text-3xl [&>p]:text-white"
+    >
       <p>
         ¡Hola! Soy Eduardo, un apasionado programador con una dedicación
         inquebrantable.<p></p>
@@ -112,6 +114,23 @@
   </div>
 
   <style>
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    /* h1 {
+      position: relative;
+      color: aliceblue;
+      text-align: center;
+      font-size: 40px;
+    } */
+    section {
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .slider {
       display: flex;
       height: auto;
@@ -173,50 +192,6 @@
         -webkit-transform: translateX(calc(-240px * 12));
         transform: translateX(calc(-240px * 12));
       }
-    }
-
-    .sec {
-      display: flex;
-      justify-content: center;
-    }
-    img {
-      width: 100px;
-      height: 100px;
-    }
-    .glass {
-      margin: auto 10px;
-      border-radius: 5px 5px;
-
-      background: #b8b1da10;
-      backdrop-filter: blur(0.2rem);
-      -webkit-backdrop-filter: blur(0.4rem);
-    }
-    p {
-      margin: 20px;
-      text-wrap: balance;
-      font-size: 25px;
-      color: aliceblue;
-    }
-
-    h1 {
-      position: relative;
-      color: aliceblue;
-      text-align: center;
-      font-size: 40px;
-    }
-    section {
-      margin: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .seccion {
-      width: 80%;
-
-      margin: 10px;
-      height: auto;
-      text-align: center;
     }
   </style>
 </section>

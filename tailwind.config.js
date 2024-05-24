@@ -12,7 +12,7 @@ export default {
         'custom-blue-1': 'rgb(2, 28, 112)',
       },
       backdropFilter: {
-        'custom-blur': 'blur(0.2rem)',
+        'custom-blur': 'blur(0.3rem)',
       },
       dropShadow: {
         '3xl': ' 3px 5px 0 rgb(10, 26, 172);',
